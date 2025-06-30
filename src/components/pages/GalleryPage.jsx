@@ -48,54 +48,60 @@ const GalleryPage = () => {
 
   if (!event) return null
 
-  return (
-    <div className="space-y-6">
-      {/* Header */}
+return (
+    <div className="space-y-10">
+      {/* Cinematic Header */}
       <motion.div
-        className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-        initial={{ opacity: 0, y: 20 }}
+        className="cinematic-container p-8 relative overflow-hidden"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8 }}
       >
-        <div>
-          <div className="flex items-center gap-2 mb-2">
+        <div className="absolute inset-0 bg-gradient-artistic opacity-10"></div>
+        
+        <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <Button
+                onClick={() => navigate(`/event/${id}`)}
+                variant="secondary"
+                size="sm"
+                icon="ArrowLeft"
+                className="backdrop-blur-md"
+              >
+                Return to Event
+              </Button>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl font-experimental font-bold gradient-text">
+              {event.name}
+            </h1>
+            
+            <div className="flex items-center text-white/70 text-lg">
+              <ApperIcon name="Images" className="h-5 w-5 mr-3" />
+              <span>Cinematic Gallery Experience</span>
+            </div>
+          </div>
+<div className="flex items-center gap-4">
             <Button
               onClick={() => navigate(`/event/${id}`)}
-              variant="ghost"
-              size="sm"
-              icon="ArrowLeft"
+              variant="primary"
+              icon="Eye"
+              className="shadow-glow"
             >
-              Back to Event
+              Event Experience
             </Button>
           </div>
-          
-          <h1 className="text-3xl font-display font-bold text-gray-900 mb-1">
-            {event.name}
-          </h1>
-          
-          <div className="flex items-center text-gray-600">
-            <ApperIcon name="Images" className="h-4 w-4 mr-2" />
-            <span>Complete Photo & Video Gallery</span>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <Button
-            onClick={() => navigate(`/event/${id}`)}
-            variant="secondary"
-            icon="Eye"
-          >
-            Event Details
-          </Button>
         </div>
       </motion.div>
-
-      {/* Gallery */}
+{/* Artistic Gallery */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+        className="relative"
       >
+        <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-artistic opacity-5 rounded-3xl blur-xl"></div>
         <EventGallery 
           eventId={parseInt(id)}
           allowUploads={true}

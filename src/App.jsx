@@ -20,9 +20,9 @@ function App() {
         </Routes>
       </Layout>
       
-      <ToastContainer
+<ToastContainer
         position="top-right"
-        autoClose={3000}
+        autoClose={4000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -30,7 +30,14 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light"
+        theme="dark"
+        toastStyle={{
+          background: 'linear-gradient(135deg, #1e293b 0%, #334155 100%)',
+          color: '#ffffff',
+          border: '1px solid rgba(168, 85, 247, 0.2)',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 40px rgba(168, 85, 247, 0.1)',
+          backdropFilter: 'blur(12px)',
+        }}
         style={{ zIndex: 9999 }}
       />
     </BrowserRouter>

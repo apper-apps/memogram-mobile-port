@@ -1,64 +1,176 @@
 @import 'react-toastify/dist/ReactToastify.css';
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Oranienbaum&family=Abril+Fatface&family=JetBrains+Mono:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply border-border;
+  }
+  
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #fafafa;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    background-attachment: fixed;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  ::selection {
+    background: rgba(168, 85, 247, 0.3);
+    color: #ffffff;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-accent text-white font-medium px-6 py-3 rounded-lg shadow-celebration hover:scale-105 transition-all duration-200 ease-out;
+    @apply relative bg-gradient-artistic text-white font-semibold px-8 py-4 rounded-2xl shadow-artistic hover:shadow-glow transform hover:scale-105 transition-all duration-500 ease-out overflow-hidden;
+    background-size: 300% 300%;
+    animation: gradient 6s ease infinite;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 -translate-x-full transition-all duration-700;
+    width: 50%;
+    height: 100%;
+    transform: skewX(-20deg);
+  }
+  
+  .btn-primary:hover::before {
+    @apply opacity-20 translate-x-full;
+    animation: shimmer 0.7s ease-out;
   }
   
   .btn-secondary {
-    @apply bg-white text-primary-600 font-medium px-6 py-3 rounded-lg shadow-card border border-primary-100 hover:scale-105 hover:bg-primary-50 transition-all duration-200 ease-out;
+    @apply relative bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-2xl border border-white/20 hover:border-primary-400 hover:bg-white/20 transform hover:scale-105 transition-all duration-500 ease-out shadow-cinematic;
   }
   
   .card {
-    @apply bg-surface rounded-xl shadow-card hover:shadow-floating transition-all duration-300 ease-out;
+    @apply relative bg-white/5 backdrop-blur-xl rounded-3xl shadow-cinematic border border-white/10 hover:shadow-artistic hover:border-primary-400/30 transition-all duration-700 ease-out overflow-hidden;
+  }
+  
+  .card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-accent-500/10 opacity-0 transition-opacity duration-700;
+  }
+  
+  .card:hover::before {
+    @apply opacity-100;
   }
   
   .input-field {
-    @apply w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all duration-200;
+    @apply w-full px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 focus:border-primary-400 focus:ring-2 focus:ring-primary-400/30 outline-none transition-all duration-500 text-white placeholder-white/60;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-artistic bg-clip-text text-transparent font-bold;
+    background-size: 300% 300%;
+    animation: gradient 6s ease infinite;
+  }
+  
+  .artistic-heading {
+    @apply font-experimental text-4xl md:text-6xl lg:text-7xl font-bold leading-tight;
+    background: linear-gradient(45deg, #a855f7, #ec4899, #f59e0b);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 8s ease infinite;
+    text-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+  }
+  
+  .cinematic-container {
+    @apply relative overflow-hidden rounded-3xl;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .artistic-border {
+    @apply relative;
+  }
+  
+  .artistic-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-3xl;
+    background: linear-gradient(45deg, #a855f7, #ec4899, #f59e0b, #10b981);
+    background-size: 300% 300%;
+    animation: gradient 6s ease infinite;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    padding: 2px;
+  }
+  
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .shimmer-effect {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer-effect::after {
+    content: '';
+    @apply absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent;
+    animation: shimmer 2s infinite;
+    transform: skewX(-20deg);
   }
 }
 
 /* Toast Notifications */
 .Toastify__toast-container {
   width: auto;
-  max-width: 420px;
+  max-width: 480px;
 }
 
 .Toastify__toast {
-  border-radius: 12px;
+  border-radius: 20px;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
-  padding: 16px;
+  padding: 20px;
   min-height: auto;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .Toastify__toast--success {
-  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.95) 0%, rgba(6, 95, 70, 0.95) 100%);
+  box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
 }
 
 .Toastify__toast--error {
-  background: linear-gradient(135deg, #f44336 0%, #ef5350 100%);
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.95) 0%, rgba(153, 27, 27, 0.95) 100%);
+  box-shadow: 0 25px 50px -12px rgba(239, 68, 68, 0.25);
 }
 
 .Toastify__toast--info {
-  background: linear-gradient(135deg, #2196f3 0%, #42a5f5 100%);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(30, 64, 175, 0.95) 100%);
+  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
 }
 
 .Toastify__progress-bar {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #9333ea, #db2777);
 }

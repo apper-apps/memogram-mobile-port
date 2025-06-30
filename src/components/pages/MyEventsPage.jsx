@@ -84,53 +84,59 @@ const MyEventsPage = () => {
     )
   }
 
-  return (
-    <div className="space-y-8">
-      {/* Header */}
+return (
+    <div className="space-y-12">
+      {/* Artistic Header */}
       <motion.div
-        className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
-        initial={{ opacity: 0, y: 20 }}
+        className="cinematic-container p-10 relative overflow-hidden"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8 }}
       >
-        <div>
-          <h1 className="text-3xl font-display font-bold text-gray-900 mb-2">
-            My Events
-          </h1>
-          <p className="text-gray-600">
-            Manage your event galleries and view shared memories
-          </p>
+        <div className="absolute inset-0 bg-gradient-artistic opacity-15"></div>
+        
+        <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div className="space-y-4">
+            <h1 className="text-5xl font-experimental font-bold gradient-text">
+              Your Artistic Collection
+            </h1>
+            <p className="text-xl text-white/80 font-light max-w-2xl">
+              Curate and showcase your visual narratives with sophisticated elegance
+            </p>
+          </div>
+<Button
+            onClick={() => navigate('/create')}
+            icon="Plus"
+            size="lg"
+            className="shadow-glow text-xl py-6 px-8"
+          >
+            Craft New Story
+          </Button>
         </div>
-
-        <Button
-          onClick={() => navigate('/create')}
-          icon="Plus"
-          size="lg"
-        >
-          Create New Event
-        </Button>
       </motion.div>
-
-      {/* Search and Stats */}
+{/* Sophisticated Search and Stats */}
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-4 gap-6"
+        className="grid grid-cols-1 lg:grid-cols-4 gap-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
       >
         <div className="lg:col-span-3">
           <SearchBar
-            placeholder="Search events by name, location, or description..."
+            placeholder="Discover your visual stories..."
             onSearch={handleSearch}
           />
         </div>
 
-        <div className="card p-4 text-center">
-          <div className="text-2xl font-bold text-primary-600 mb-1">
-            {events.length}
-          </div>
-          <div className="text-sm text-gray-600">
-            Total Events
+        <div className="card p-6 text-center relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-artistic opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+          <div className="relative z-10">
+            <div className="text-3xl font-experimental font-bold gradient-text mb-2">
+              {events.length}
+            </div>
+            <div className="text-sm text-white/70 font-medium">
+              Artistic Collections
+            </div>
           </div>
         </div>
       </motion.div>

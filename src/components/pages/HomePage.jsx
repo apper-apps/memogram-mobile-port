@@ -55,153 +55,189 @@ const HomePage = () => {
     visible: { opacity: 1, y: 0 }
   }
 
-  return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <motion.section
-        className="text-center space-y-8"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="space-y-4">
-          <motion.h1
-            className="text-4xl md:text-6xl font-display font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            Capture Every{' '}
-            <span className="gradient-text">Memory</span>
-          </motion.h1>
-          
-          <motion.p
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            Create beautiful event galleries where your guests can easily share photos and videos. 
-            Perfect for weddings, parties, and special celebrations.
-          </motion.p>
-        </div>
+return (
+    <div className="relative min-h-screen">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-artistic rounded-full blur-3xl opacity-20 floating-element"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-celebration rounded-full blur-3xl opacity-15 floating-element" style={{ animationDelay: '2s' }}></div>
+      </div>
 
-        <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
+      <div className="relative space-y-20">
+        {/* Hero Section */}
+        <motion.section
+          className="text-center space-y-12 pt-20"
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <Button
-            onClick={() => navigate('/create')}
-            size="lg"
-            icon="Plus"
-            className="min-w-48"
-          >
-            Create Your Event
-          </Button>
-          
-          <Button
-            onClick={() => navigate('/my-events')}
-            variant="secondary"
-            size="lg"
-            icon="Calendar"
-            className="min-w-48"
-          >
-            View My Events
-          </Button>
-        </motion.div>
-      </motion.section>
-
-      {/* Features Grid */}
-      <motion.section
-        className="space-y-12"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div
-          className="text-center space-y-4"
-          variants={itemVariants}
-        >
-          <h2 className="text-3xl font-display font-bold text-gray-900">
-            Everything You Need
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Powerful features designed to make sharing event memories effortless and beautiful.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-        >
-          {features.map((feature, index) => (
+          <div className="space-y-8">
             <motion.div
-              key={feature.title}
-              className="card p-6 text-center group hover:shadow-celebration"
-              variants={itemVariants}
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.2 }}
+              className="floating-element"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
             >
-              <div className="w-16 h-16 bg-gradient-soft rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
-                <ApperIcon 
-                  name={feature.icon} 
-                  className="h-8 w-8 text-primary-600" 
-                />
-              </div>
-              
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                {feature.title}
-              </h3>
-              
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
+              <h1 className="artistic-heading">
+                Craft Visual
+                <br />
+                <span className="block font-display italic transform -rotate-2">Stories</span>
+              </h1>
             </motion.div>
-          ))}
-        </motion.div>
-      </motion.section>
+            
+            <motion.p
+              className="text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 1 }}
+            >
+              Transform your celebrations into cinematic experiences. 
+              <span className="gradient-text font-semibold">Memogram</span> creates 
+              immersive galleries where every moment becomes art.
+            </motion.p>
+</div>
 
-      {/* CTA Section */}
-      <motion.section
-        className="bg-gradient-celebration rounded-2xl p-8 md:p-12 text-center text-white"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8, duration: 0.5 }}
-      >
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl md:text-4xl font-display font-bold">
-            Ready to Create Your Event?
-          </h2>
-          
-          <p className="text-xl text-white/90 leading-relaxed">
-            Join thousands of event hosts who trust Memogram to capture and share their special moments.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <motion.div
+            className="flex flex-col lg:flex-row items-center justify-center gap-8 pt-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 1 }}
+          >
             <Button
               onClick={() => navigate('/create')}
-              variant="secondary"
               size="lg"
-              icon="Sparkles"
-              className="bg-white text-primary-600 hover:bg-gray-50 min-w-48"
+              icon="Plus"
+              className="min-w-64 text-xl py-6 shadow-glow"
             >
-              Start Creating
+              Begin Your Story
             </Button>
             
             <Button
               onClick={() => navigate('/my-events')}
-              variant="ghost"
+              variant="secondary"
               size="lg"
-              icon="ArrowRight"
-              className="text-white hover:bg-white/20 min-w-48"
+              icon="Calendar"
+              className="min-w-64 text-xl py-6"
             >
-              Browse Events
+              Explore Galleries
             </Button>
+          </motion.div>
+        </motion.section>
+{/* Features Grid */}
+        <motion.section
+          className="space-y-16"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div
+            className="text-center space-y-6"
+            variants={itemVariants}
+          >
+            <h2 className="text-5xl font-experimental font-bold gradient-text">
+              Cinematic Capabilities
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto font-light">
+              Each feature crafted with artistic precision to transform ordinary moments into extraordinary visual narratives.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+            variants={containerVariants}
+          >
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                className="card p-8 text-center group relative overflow-hidden"
+                variants={itemVariants}
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              >
+                <div className="absolute inset-0 bg-gradient-artistic opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
+                
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-artistic rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-glow">
+                    <ApperIcon 
+                      name={feature.icon} 
+                      className="h-10 w-10 text-white" 
+                    />
+                  </div>
+                  
+                  <h3 className="text-2xl font-display font-bold text-white mb-4 group-hover:gradient-text transition-all duration-500">
+                    {feature.title}
+                  </h3>
+                  
+                  <p className="text-white/70 leading-relaxed text-lg">
+                    {feature.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.section>
+{/* CTA Section */}
+        <motion.section
+          className="relative"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1, duration: 0.8 }}
+        >
+          <div className="cinematic-container p-12 md:p-16 text-center relative overflow-hidden">
+            {/* Artistic Background Elements */}
+            <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary-500/20 rounded-full blur-2xl animate-pulse-slow"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-accent-500/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+            </div>
+            
+            <div className="relative z-10 max-w-4xl mx-auto space-y-8">
+              <motion.h2 
+                className="text-4xl md:text-6xl font-experimental font-bold gradient-text"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2, duration: 0.8 }}
+              >
+                Your Story Awaits
+              </motion.h2>
+              
+              <motion.p 
+                className="text-2xl text-white/80 leading-relaxed font-light max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.4, duration: 0.8 }}
+              >
+                Step into a realm where technology meets artistry. Create galleries that don't just store memories—they transform them into visual poetry.
+              </motion.p>
+              
+              <motion.div 
+                className="flex flex-col lg:flex-row items-center justify-center gap-8 pt-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.6, duration: 0.8 }}
+              >
+                <Button
+                  onClick={() => navigate('/create')}
+                  size="lg"
+                  icon="Sparkles"
+                  className="min-w-64 text-xl py-6 shadow-glow shimmer-effect"
+                >
+                  Craft Your Vision
+                </Button>
+                
+                <Button
+                  onClick={() => navigate('/my-events')}
+                  variant="secondary"
+                  size="lg"
+                  icon="ArrowRight"
+                  className="min-w-64 text-xl py-6"
+                >
+                  Discover Artistry
+                </Button>
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
+      </div>
     </div>
   )
 }

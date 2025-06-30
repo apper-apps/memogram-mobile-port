@@ -160,65 +160,67 @@ const EventPage = () => {
 
   if (!event) return null
 
-  return (
-    <div className="space-y-8">
-      {/* Event Header */}
+return (
+    <div className="space-y-12">
+      {/* Cinematic Event Header */}
       <motion.div
-        className="card p-8 bg-gradient-to-r from-primary-50 to-secondary-50"
-        initial={{ opacity: 0, y: 20 }}
+        className="cinematic-container p-12 relative overflow-hidden"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8 }}
       >
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-4">
-              <Badge variant="primary">
+        <div className="absolute inset-0 bg-gradient-artistic opacity-15"></div>
+        
+        <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div className="flex-1 space-y-6">
+            <div className="flex items-center gap-4 mb-6">
+              <Badge variant="primary" className="px-4 py-2 text-base bg-gradient-artistic text-white border-0">
                 {event.theme || 'Wedding'}
               </Badge>
               {event.password && (
-                <Badge variant="secondary" icon="Lock">
-                  Private
+                <Badge variant="secondary" icon="Lock" className="px-4 py-2 text-base bg-white/20 text-white border-white/30">
+                  Private Experience
                 </Badge>
               )}
-            </div>
+</div>
             
-            <h1 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-3">
+            <h1 className="text-4xl md:text-6xl font-experimental font-bold gradient-text leading-tight">
               {event.name}
             </h1>
             
-            <div className="space-y-2 text-gray-600">
+            <div className="space-y-4 text-white/80 text-lg">
               <div className="flex items-center">
-                <ApperIcon name="Calendar" className="h-5 w-5 mr-3" />
-                {formatDate(event.date)}
+                <ApperIcon name="Calendar" className="h-6 w-6 mr-4 text-primary-400" />
+                <span className="font-light">{formatDate(event.date)}</span>
               </div>
               
               {event.location && (
                 <div className="flex items-center">
-                  <ApperIcon name="MapPin" className="h-5 w-5 mr-3" />
-                  {event.location}
+                  <ApperIcon name="MapPin" className="h-6 w-6 mr-4 text-accent-400" />
+                  <span className="font-light">{event.location}</span>
                 </div>
               )}
               
               <div className="flex items-center">
-                <ApperIcon name="Images" className="h-5 w-5 mr-3" />
-                {media.length} photos & videos shared
+                <ApperIcon name="Images" className="h-6 w-6 mr-4 text-secondary-400" />
+                <span className="font-light">{media.length} visual memories captured</span>
               </div>
             </div>
-
-            {event.description && (
-              <p className="text-gray-700 mt-4 leading-relaxed">
+{event.description && (
+              <p className="text-white/70 text-xl leading-relaxed font-light max-w-3xl">
                 {event.description}
               </p>
             )}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button
               onClick={() => setShowUpload(!showUpload)}
               icon={showUpload ? "Eye" : "Upload"}
               size="lg"
+              className="shadow-glow text-lg py-5 px-8"
             >
-              {showUpload ? "View Gallery" : "Upload Photos"}
+              {showUpload ? "Experience Gallery" : "Share Memories"}
             </Button>
             
             <Button
@@ -226,8 +228,9 @@ const EventPage = () => {
               variant="secondary"
               icon="Images"
               size="lg"
+              className="text-lg py-5 px-8"
             >
-              Full Gallery
+              Cinematic View
             </Button>
           </div>
         </div>
