@@ -1,0 +1,167 @@
+[
+  {
+    "Id": 1,
+    "eventId": 1,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=200&fit=crop",
+    "caption": "The beautiful ceremony setup",
+    "uploaderId": "guest-001",
+    "uploaderName": "Jennifer Smith",
+    "uploadedAt": "2024-06-15T14:30:00Z"
+  },
+  {
+    "Id": 2,
+    "eventId": 1,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=300&h=200&fit=crop",
+    "caption": "First dance magic ✨",
+    "uploaderId": "guest-002",
+    "uploaderName": "Michael Johnson",
+    "uploadedAt": "2024-06-15T19:45:00Z"
+  },
+  {
+    "Id": 3,
+    "eventId": 1,
+    "type": "video",
+    "url": "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1460978812857-470ed1c77af0?w=300&h=200&fit=crop",
+    "caption": "Wedding ceremony highlights",
+    "uploaderId": "guest-003",
+    "uploaderName": "Sarah Davis",
+    "uploadedAt": "2024-06-15T16:15:00Z"
+  },
+  {
+    "Id": 4,
+    "eventId": 1,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=300&h=200&fit=crop",
+    "caption": "Beautiful bride getting ready",
+    "uploaderId": "guest-004",
+    "uploaderName": "Emily Wilson",
+    "uploadedAt": "2024-06-15T13:20:00Z"
+  },
+  {
+    "Id": 5,
+    "eventId": 2,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=300&h=200&fit=crop",
+    "caption": "Birthday girl making a wish! 🎂",
+    "uploaderId": "guest-005",
+    "uploaderName": "Alex Thompson",
+    "uploadedAt": "2024-04-22T20:30:00Z"
+  },
+  {
+    "Id": 6,
+    "eventId": 2,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=300&h=200&fit=crop",
+    "caption": "Amazing rooftop view!",
+    "uploaderId": "guest-006",
+    "uploaderName": "Lisa Brown",
+    "uploadedAt": "2024-04-22T18:15:00Z"
+  },
+  {
+    "Id": 7,
+    "eventId": 3,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1511578314322-379afb476865?w=300&h=200&fit=crop",
+    "caption": "Keynote speaker presentation",
+    "uploaderId": "guest-007",
+    "uploaderName": "David Martinez",
+    "uploadedAt": "2024-09-10T10:45:00Z"
+  },
+  {
+    "Id": 8,
+    "eventId": 3,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=300&h=200&fit=crop",
+    "caption": "Team building session",
+    "uploaderId": "guest-008",
+    "uploaderName": "Rachel Green",
+    "uploadedAt": "2024-09-10T14:20:00Z"
+  },
+  {
+    "Id": 9,
+    "eventId": 4,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop",
+    "caption": "Beautiful baby shower decorations 👶",
+    "uploaderId": "guest-009",
+    "uploaderName": "Maria Garcia",
+    "uploadedAt": "2024-05-08T15:30:00Z"
+  },
+  {
+    "Id": 10,
+    "eventId": 5,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=300&h=200&fit=crop",
+    "caption": "Sunset dinner by the beach 🌅",
+    "uploaderId": "guest-010",
+    "uploaderName": "James Miller",
+    "uploadedAt": "2024-07-20T19:00:00Z"
+  },
+  {
+    "Id": 11,
+    "eventId": 6,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=300&h=200&fit=crop",
+    "caption": "Class of 2014 reunion group photo!",
+    "uploaderId": "guest-011",
+    "uploaderName": "Kevin Anderson",
+    "uploadedAt": "2024-08-15T21:45:00Z"
+  },
+  {
+    "Id": 12,
+    "eventId": 1,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=300&h=200&fit=crop",
+    "caption": "Bouquet toss moment!",
+    "uploaderId": "guest-012",
+    "uploaderName": "Amanda Taylor",
+    "uploadedAt": "2024-06-15T20:15:00Z"
+  },
+  {
+    "Id": 13,
+    "eventId": 2,
+    "type": "video",
+    "url": "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=300&h=200&fit=crop",
+    "caption": "Party highlights reel",
+    "uploaderId": "guest-013",
+    "uploaderName": "Chris Wilson",
+    "uploadedAt": "2024-04-22T22:00:00Z"
+  },
+  {
+    "Id": 14,
+    "eventId": 1,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=300&h=200&fit=crop",
+    "caption": "Wedding cake cutting ceremony",
+    "uploaderId": "guest-014",
+    "uploaderName": "Nicole Clark",
+    "uploadedAt": "2024-06-15T21:30:00Z"
+  },
+  {
+    "Id": 15,
+    "eventId": 3,
+    "type": "photo",
+    "url": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=300&h=200&fit=crop",
+    "caption": "Networking session in action",
+    "uploaderId": "guest-015",
+    "uploaderName": "Robert Lee",
+    "uploadedAt": "2024-09-10T16:45:00Z"
+  }
+]

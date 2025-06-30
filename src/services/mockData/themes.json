@@ -1,0 +1,58 @@
+[
+  {
+    "Id": 1,
+    "name": "Elegant Wedding",
+    "primaryColor": "linear-gradient(135deg, #fdf2f8, #f8fafc)",
+    "backgroundImage": "",
+    "fontFamily": "Playfair Display"
+  },
+  {
+    "Id": 2,
+    "name": "Birthday Celebration",
+    "primaryColor": "linear-gradient(135deg, #fef3c7, #fce7f3)",
+    "backgroundImage": "",
+    "fontFamily": "Inter"
+  },
+  {
+    "Id": 3,
+    "name": "Corporate Event",
+    "primaryColor": "linear-gradient(135deg, #e0f2fe, #f0f9ff)",
+    "backgroundImage": "",
+    "fontFamily": "Inter"
+  },
+  {
+    "Id": 4,
+    "name": "Baby Shower",
+    "primaryColor": "linear-gradient(135deg, #f0fdf4, #fef7cd)",
+    "backgroundImage": "",
+    "fontFamily": "Inter"
+  },
+  {
+    "Id": 5,
+    "name": "Engagement Party",
+    "primaryColor": "linear-gradient(135deg, #fdf4ff, #fef2f2)",
+    "backgroundImage": "",
+    "fontFamily": "Playfair Display"
+  },
+  {
+    "Id": 6,
+    "name": "Reunion",
+    "primaryColor": "linear-gradient(135deg, #ede9fe, #f3e8ff)",
+    "backgroundImage": "",
+    "fontFamily": "Inter"
+  },
+  {
+    "Id": 7,
+    "name": "Graduation",
+    "primaryColor": "linear-gradient(135deg, #ecfdf5, #f0f9ff)",
+    "backgroundImage": "",
+    "fontFamily": "Inter"
+  },
+  {
+    "Id": 8,
+    "name": "Anniversary",
+    "primaryColor": "linear-gradient(135deg, #fef2f2, #fdf2f8)",
+    "backgroundImage": "",
+    "fontFamily": "Playfair Display"
+  }
+]
